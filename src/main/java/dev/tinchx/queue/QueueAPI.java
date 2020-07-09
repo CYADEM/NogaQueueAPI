@@ -21,6 +21,13 @@ public class QueueAPI extends JavaPlugin {
         return manager.isQueueing(player);
     }
 
+    public static boolean isPlayerQueuePaused(Player player) {
+        if (!isQueueing(player)) {
+            return false;
+        }
+        return manager.getPlayerQueue(player).isPaused();
+    }
+
     public static int getPosition(Player player) {
         if (!isQueueing(player)) {
             return -1;
