@@ -22,28 +22,28 @@ public class QueueAPI extends JavaPlugin {
     }
 
     public static int getPosition(Player player) {
-        if (!manager.isQueueing(player)) {
+        if (!isQueueing(player)) {
             return -1;
         }
         return manager.getPlayerQueue(player).getPriority(player);
     }
 
     public static String getPlayerQueue(Player player) {
-        if (!manager.isQueueing(player)) {
+        if (!isQueueing(player)) {
             return null;
         }
         return manager.getPlayerQueue(player).getServer();
     }
 
     public static int getPlayerQueueLimit(Player player) {
-        if (!manager.isQueueing(player)) {
+        if (!isQueueing(player)) {
             return -1;
         }
         return manager.getPlayerQueue(player).getLimit();
     }
 
     public static int getPlayerQueueSize(Player player) {
-        if (!manager.isQueueing(player)) {
+        if (!isQueueing(player)) {
             return -1;
         }
         return manager.getPlayerQueue(player).getUuids().size();
