@@ -1,0 +1,6 @@
+name: NogaQueueAPI
+main: dev.tinchx.queue.QueueAPI
+version: 1.0
+author: Tinchx
+depend:
+  - NogaQueue
